@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2027.02.12 書宏 ♡ 彤芸 幸福登記見證日</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #fcf9f4;
+      background-image: radial-gradient(#efe7d8 1.2px, transparent 1.2px);
+      background-size: 24px 24px;
+      color: #4a3e3d;
+      margin: 0;
+      padding: 30px 16px 70px;
+    }
+    .wrapper { max-width: 580px; margin: 0 auto; position: relative; }
+
+    /* 頂部 Header 精緻排版 */
+    .top-header { text-align: center; margin-bottom: 24px; }
+    .ring-icon {
+      font-size: 38px;
+      display: inline-block;
+      margin-bottom: 10px;
+      animation: gentle-sparkle 2.2s infinite ease-in-out;
+    }
+    @keyframes gentle-sparkle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+    .main-title {
+      font-size: 23px;
+      font-weight: 700;
+      color: #2d2625;
+      margin: 0 0 14px;
+      letter-spacing: 0.6px;
+    }
+    .couple-names {
+      font-size: 19px;
+      font-weight: 500;
+      color: #c07a4e;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e8c6b0;
+    }
+    .event-date-badge {
+      font-size: 13.5px;
+      color: #8c7873;
+      margin-bottom: 22px;
+      letter-spacing: 0.5px;
+    }
+    .divider-line {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e8ddd0, transparent);
+      margin: 0 auto 22px;
+    }
+    .invite-lead {
+      font-size: 16px;
+      font-weight: 700;
+      color: #443533;
+      margin-bottom: 10px;
+    }
+    .invite-text-block {
+      font-size: 14.5px;
+      color: #5c4d4a;
+      line-height: 1.85;
+      margin: 0 auto 8px;
+      max-width: 520px;
+      text-align: center;
+    }
+    .arrow-down { text-align: center; color: #c4b5a8; font-size: 16px; margin: 18px 0 16px; }
+
+    /* 活動卡片 */
+    .event-card {
+      background: #fdfcf9;
+      border: 1.5px solid #ede3d7;
+      border-radius: 18px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+      box-shadow: 0 6px 20px rgba(180, 160, 140, 0.08);
+    }
+    .event-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #ebdcd0;
+    }
+    .event-title {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #3e3232;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-warm {
+      background: #f4ecdf;
+      color: #8c6b53;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      border: 1px solid #ebdcd0;
+    }
+    .event-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 14px;
+      color: #554644;
+      margin-bottom: 12px;
+    }
+    .event-info-item { display: flex; align-items: center; gap: 8px; line-height: 1.4; }
+    .event-desc { font-size: 13px; color: #8a7873; line-height: 1.5; margin-top: 6px; }
+    
+    .map-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 10px 0;
+      border: 1.5px solid #dfd1c2;
+      border-radius: 24px;
+      background: #ffffff;
+      color: #655450;
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 14px;
+      box-shadow: 0 2px 6px rgba(180, 160, 140, 0.06);
+    }
+
+    /* 小小提醒 */
+    .notice-card {
+      background: #fdf6ec;
+      border: 1px dashed #e8b98b;
+      border-radius: 14px;
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 13px;
+      color: #7a4f29;
+      line-height: 1.65;
+      margin-top: 14px;
+      margin-bottom: 24px;
+    }
+    .notice-title { font-weight: 700; margin-bottom: 5px; color: #c06c38; font-size: 13.5px; }
+
+    /* 登記表單 */
+    .form-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px 18px;
+      box-shadow: 0 10px 30px rgba(180, 160, 140, 0.1);
+      border: 1.5px solid #f3ece1;
+      margin-bottom: 34px;
+      position: relative;
+    }
+    .form-card::after {
+      content: "";
+      position: absolute;
+      top: -11px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 22px;
+      background: rgba(238, 206, 172, 0.7);
+      border-radius: 3px;
+    }
+
+    .capacity-banner {
+      background: #fef7ee;
+      border: 1px solid #ebdcd0;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #934c1b;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #5c4d4a;
+    }
+    input[type="text"], input[type="number"], textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background-color: #faf7f2;
+      border: 1.5px solid #ebdcd0;
+      border-radius: 12px;
+      font-size: 15px;
+      color: #4a3e3d;
+      outline: none;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus {
+      background-color: #ffffff;
+      border-color: #e59866;
+      box-shadow: 0 0 0 3px rgba(229, 152, 102, 0.18);
+    }
+    textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
+
+    /* 按鈕群組 */
+    .status-group { display: flex; flex-direction: column; gap: 9px; }
+    .status-item-block {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .status-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 16px;
+      border-radius: 12px;
+      border: 1.5px solid #ebdcd0;
+      background: #faf7f2;
+      color: #655450;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s;
+    }
+    .status-btn.active {
+      background: #fdf3e7;
+      border-color: #e59866;
+      color: #c06c38;
+      font-weight: 700;
+    }
+    .status-item-block.expanded .status-btn {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-bottom-style: dashed;
+    }
+    .status-btn.disabled {
+      background: #f4f4f4;
+      border-color: #e5e5e5;
+      color: #b0b0b0;
+      cursor: not-allowed;
+    }
+    .quota-tag {
+      font-size: 11.5px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: #fae8d8;
+      color: #a4501c;
+      font-weight: 600;
+    }
+    .quota-tag.full { background: #fee2e2; color: #ef4444; }
+
+    /* 附屬卡片（依附在按鈕正下方） */
+    .attached-sub-box {
+      background: #fffcf8;
+      border: 1.5px solid #e59866;
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      padding: 12px 14px 14px;
+      animation: subSlideDown 0.2s ease-out;
+      box-shadow: 0 4px 10px rgba(229, 152, 102, 0.08);
+    }
+    @keyframes subSlideDown {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .guest-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+    .guest-btn {
+      text-align: center;
+      padding: 8px 4px;
+      background: #ffffff;
+      border: 1.5px solid #ebdcd0;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #655450;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    .guest-btn.active { background: #fdf3e7; border-color: #e59866; color: #c06c38; font-weight: 700; }
+    .custom-count-input { display: none; margin-top: 8px; }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #e59866 0%, #d97746 100%);
+      color: #ffffff;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(217, 119, 70, 0.28);
+      margin-top: 14px;
+    }
+    .submit-btn:disabled { background: #d5c8be; cursor: not-allowed; }
+    .tip-status { text-align: center; font-size: 13px; color: #9c8983; margin-top: 10px; min-height: 20px; }
+
+    /* 留言牆 Header */
+    .wall-header-section { text-align: center; margin-bottom: 18px; padding: 0 10px; }
+    .wall-title-row { font-size: 19px; font-weight: 700; color: #3e3232; margin-bottom: 8px; }
+    .wall-subtext { font-size: 13.5px; color: #786864; line-height: 1.7; }
+    .wall-count-box { text-align: right; margin-bottom: 10px; }
+    .wall-count { font-size: 12px; color: #9c8983; background: #efe7d8; padding: 3px 10px; border-radius: 20px; }
+
+    /* 留言卡片 */
+    .msg-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      border: 1px solid #f1eae0;
+      box-shadow: 0 4px 12px rgba(180, 160, 140, 0.06);
+    }
+    .msg-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; flex-wrap: wrap; gap: 6px; }
+    .user-info { display: flex; align-items: center; gap: 8px; }
+    .user-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #fdf3e7;
+      color: #d97746;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 13px;
+      border: 1px solid #fae4cc;
+    }
+    .user-name { font-weight: 700; font-size: 14.5px; color: #3e3232; }
+    .tags-box { display: flex; align-items: center; gap: 6px; }
+    .tag-badge { font-size: 11.5px; padding: 3px 9px; border-radius: 20px; font-weight: 600; }
+    .badge-both { background: #fce7f3; color: #be185d; border: 1px solid #fbcfe8; }
+    .badge-day { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; }
+    .badge-night { background: #fef3c7; color: #b45309; border: 1px solid #fde68a; }
+    .badge-none { background: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+
+    .delete-btn {
+      display: none;
+      background: #fee2e2;
+      color: #ef4444;
+      border: 1px solid #fca5a5;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 6px;
+      padding: 3px 8px;
+      cursor: pointer;
+    }
+    .is-admin .delete-btn { display: inline-block; }
+    .msg-text { font-size: 14px; color: #554644; line-height: 1.6; white-space: pre-wrap; word-break: break-word; }
+    .msg-time { font-size: 11px; color: #b5a49e; margin-top: 8px; text-align: right; }
+
+    .admin-bar { margin-top: 36px; text-align: center; font-size: 12px; color: #b5a49e; }
+    .admin-link { cursor: pointer; text-decoration: underline; }
+    .admin-badge { background: #ecfdf5; color: #059669; border: 1px solid #a7f3d0; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper" id="mainWrapper">
+    <div class="top-header">
+      <div class="ring-icon">💍</div>
+      <h1 class="main-title">我們即將邁入人生的新篇章！</h1>
+      <div class="couple-names">書宏 ♡ 彤芸</div>
+      <div class="event-date-badge">2027.02.12 | 幸福登記見證日</div>
+      <div class="divider-line"></div>
+      <div class="invite-lead">我們要結婚啦！💕</div>
+      <div class="invite-text-block">
+        誠摯邀請親愛的朋友們，一起見證我們的幸福時刻，留下難忘的美好回憶。<br>
+        晚上也有輕鬆的聚餐，無法參加白天登記的朋友，也歡迎一起來吃飯、聊天！
+      </div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <div class="event-card">
+      <div class="event-card-top">
+        <div class="event-title">💍 白天｜幸福登記見證</div>
+        <span class="badge-warm">限額 5 位</span>
+      </div>
+      <div class="event-info-list">
+        <div class="event-info-item">📅 2027 / 02 / 12 ( 五 )</div>
+        <div class="event-info-item">🕒 時間：下午，待確認</div>
+        <div class="event-info-item">📍 地點：臺北市士林區戶政事務所</div>
+      </div>
+      <div class="event-desc">一起見證結婚登記，留下幸福合照</div>
+      <a href="https://maps.google.com/?q=臺北市士林區戶政事務所" target="_blank" class="map-btn">📍 查看地圖</a>
+    </div>
+
+    <div class="event-card">
+      <div class="event-card-top">
+        <div class="event-title">🍽️ 晚上｜幸福晚餐聚會</div>
+        <span class="badge-warm">歡迎大家</span>
+      </div>
+      <div class="event-info-list">
+        <div class="event-info-item">📅 2027 / 02 / 12 ( 五 )</div>
+        <div class="event-info-item">🕒 預計 18:00 開始</div>
+        <div class="event-info-item">📍 地點：兒童新樂園附近，餐廳待訂</div>
+      </div>
+      <div class="event-desc">人均 NT$200～500，各自付費、不收禮金</div>
+    </div>
+
+    <div class="arrow-down">↓</div>
+
+    <div class="notice-card">
+      <div class="notice-title">✨ 小小提醒</div>
+      這不是正式婚宴，<b>不收禮金、不用準備禮物</b>，晚餐採各自付費（AA 制），每人預計 NT$200～500。<br>
+      大家輕鬆參加就好，有你們的祝福就是最棒的禮物！🥰
+    </div>
+
+    <div class="form-card">
+      <div id="capacityBanner" class="capacity-banner">名額計算中...</div>
+      <div class="form-group">
+        <label for="name">🌿 您的名字 / 暱稱 <span style="color:#d97746;">*</span></label>
+        <input type="text" id="name" placeholder="請輸入姓名或好認的稱呼" required maxlength="30">
+      </div>
+
+      <div class="form-group">
+        <label>📅 出席意願選擇 <span style="color:#d97746;">*</span></label>
+        <div class="status-group">
+          <!-- 項目 1：登記 + 晚餐 -->
+          <div class="status-item-block expanded" id="block-both">
+            <div id="btn-both" class="status-btn active" onclick="selectStatus('💕 登記＋晚餐，我都要參加', 'block-both')">
+              <span>💕 登記＋晚餐，我都要參加</span>
+              <span id="tag-both" class="quota-tag">限額 5 位</span>
+            </div>
+            <!-- 附屬晚餐人數面板（預設停駐在此） -->
+            <div id="attachedGuestsPanel" class="attached-sub-box">
+              <div style="font-size:12.5px; font-weight:700; color:#8c5638; margin-bottom:7px; display:flex; align-items:center; gap:4px;">
+                <span>↳ 🍽️ 晚餐出席人數（含自己）：</span>
+              </div>
+              <div class="guest-options">
+                <div class="guest-btn active" onclick="selectGuests(1, this)">1 位</div>
+                <div class="guest-btn" onclick="selectGuests(2, this)">2 位 (攜伴)</div>
+                <div class="guest-btn" onclick="selectGuests('more', this)">3 位以上</div>
+              </div>
+              <div id="customGuestsRow" class="custom-count-input">
+                <input type="number" id="customGuestsInput" min="3" max="10" placeholder="請輸入總人數（例：3）">
+              </div>
+            </div>
+          </div>
+
+          <!-- 項目 2：只參加白天登記 -->
+          <div class="status-item-block" id="block-day">
+            <div id="btn-day" class="status-btn" onclick="selectStatus('💍 只參加白天登記', 'block-day')">
+              <span>💍 只參加白天登記</span>
+              <span id="tag-day" class="quota-tag">限額 5 位</span>
+            </div>
+          </div>
+
+          <!-- 項目 3：只參加晚上聚餐 -->
+          <div class="status-item-block" id="block-night">
+            <div id="btn-night" class="status-btn" onclick="selectStatus('🍽️ 只參加晚上聚餐', 'block-night')">
+              <span>🍽️ 只參加晚上聚餐</span>
+              <span style="font-size:12px; color:#b5a49e;">不限人數 💛</span>
+            </div>
+          </div>
+
+          <!-- 項目 4：無法參加 -->
+          <div class="status-item-block" id="block-none">
+            <div id="btn-none" class="status-btn" onclick="selectStatus('🥹 這次無法參加，送上祝福', 'block-none')">
+              <span>🥹 這次無法參加，送上祝福</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-top:18px;">
+        <label for="message">✍️ 祝福或想對我們說的話</label>
+        <textarea id="message" placeholder="留下一段溫暖的心意或祝福吧..." maxlength="500"></textarea>
+      </div>
+
+      <button id="submitBtn" class="submit-btn" onclick="submitData()">✨ 送出回覆與祝福</button>
+      <div id="tipStatus" class="tip-status"></div>
+    </div>
+
+    <div class="wall-header-section">
+      <div class="wall-title-row">
+        <span>💬 幸福祝福留言牆</span>
+      </div>
+      <div class="wall-subtext">
+        無論能否到場，都歡迎留下祝福！<br>
+        每一句心意，都是我們最珍貴的回憶 💕
+      </div>
+    </div>
+
+    <div class="wall-count-box">
+      <span id="wallCount" class="wall-count">載入中...</span>
+    </div>
+
+    <div id="cardsList"></div>
+
+    <div class="admin-bar">
+      <span id="adminStatusText">
+        主辦人管理：<span class="admin-link" onclick="promptAdminLogin()">⚙️ 解鎖管理權限</span>
+      </span>
+    </div>
+  </div>
+
+  <script>
+    // ⚠️ 請務必將此處換成您 Google Apps Script 部署後的 Web App URL 網址！
+    const API_URL = "https://script.google.com/macros/s/AKfycbzvixYnVzusZ-Fey9mgr-Qs68Vju5vvTZfq9DMSQQleIZ_02qxwyLwnu4QgXVK2f4MO/exec";
+
+    let currentStatus = '💕 登記＋晚餐，我都要參加';
+    let currentGuests = 1;
+    let allRecords = [];
+    let savedAdminPassword = '';
+
+    function escapeHTML(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    // 動態附屬展開/移動人數欄位
+    function selectStatus(statusText, blockId) {
+      const targetBtn = document.querySelector(`#${blockId} .status-btn`);
+      if (targetBtn && targetBtn.classList.contains('disabled')) {
+        alert('抱歉！白天登記觀禮席次已額滿（限額 5 位），非常歡迎選擇「🍽️ 只參加晚上聚餐」一起吃頓飯！');
+        return;
+      }
+      currentStatus = statusText;
+
+      document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.status-item-block').forEach(b => b.classList.remove('expanded'));
+
+      if (targetBtn) targetBtn.classList.add('active');
+
+      const panel = document.getElementById('attachedGuestsPanel');
+
+      if (blockId === 'block-both' || blockId === 'block-night') {
+        const targetBlock = document.getElementById(blockId);
+        targetBlock.classList.add('expanded');
+        targetBlock.appendChild(panel);
+        panel.style.display = 'block';
+      } else {
+        panel.style.display = 'none';
+      }
+    }
+
+    function selectGuests(val, el) {
+      document.querySelectorAll('.guest-btn').forEach(btn => btn.classList.remove('active'));
+      el.classList.add('active');
+      const customInputRow = document.getElementById('customGuestsRow');
+      if (val === 'more') {
+        customInputRow.style.display = 'block';
+        document.getElementById('customGuestsInput').focus();
+        currentGuests = 'more';
+      } else {
+        customInputRow.style.display = 'none';
+        currentGuests = val;
+      }
+    }
+
+    function updateCapacityUI(dayCount, maxDay, dinnerTotalPeople) {
+      const banner = document.getElementById('capacityBanner');
+      const btnBoth = document.getElementById('btn-both');
+      const btnDay = document.getElementById('btn-day');
+      const tagBoth = document.getElementById('tag-both');
+      const tagDay = document.getElementById('tag-day');
+      const remainingDay = maxDay - dayCount;
+
+      let html = `🏛️ <b>白天登記見證</b>：已登記 <b>${dayCount}</b> / ${maxDay} 位（戶政事務所席位有限）<br>
+                  🍽️ <b>晚上聚餐</b>：已有 <b>${dinnerTotalPeople}</b> 位出席（含攜伴，不限人數熱情歡迎！）`;
+
+      if (remainingDay <= 0) {
+        html = `⚠️ <b>白天登記名額已滿（已達 5 人上限）</b><br>非常歡迎大家選擇「🍽️ 只參加晚上聚餐（目前已有 ${dinnerTotalPeople} 位）」一起熱鬧慶祝！`;
+        banner.style.background = '#fef2f2';
+        banner.style.borderColor = '#fca5a5';
+        banner.style.color = '#b91c1c';
+        btnBoth.classList.add('disabled');
+        btnDay.classList.add('disabled');
+        tagBoth.innerText = '已額滿';
+        tagBoth.className = 'quota-tag full';
+        tagDay.innerText = '已額滿';
+        tagDay.className = 'quota-tag full';
+
+        if (currentStatus === '💕 登記＋晚餐，我都要參加' || currentStatus === '💍 只參加白天登記') {
+          selectStatus('🍽️ 只參加晚上聚餐', 'block-night');
+        }
+      } else {
+        banner.style.background = '#fef7ee';
+        banner.style.borderColor = '#ebdcd0';
+        banner.style.color = '#934c1b';
+        btnBoth.classList.remove('disabled');
+        btnDay.classList.remove('disabled');
+        tagBoth.innerText = `剩 ${remainingDay} 名額`;
+        tagBoth.className = 'quota-tag';
+        tagDay.innerText = `剩 ${remainingDay} 名額`;
+        tagDay.className = 'quota-tag';
+      }
+      banner.innerHTML = html;
+    }
+
+    function renderCard(item) {
+      const card = document.createElement('div');
+      card.className = 'msg-card';
+      card.id = `card-${item.id}`;
+
+      let badgeClass = 'badge-both';
+      if (item.status.includes('白天登記')) badgeClass = 'badge-day';
+      if (item.status.includes('晚上聚餐')) badgeClass = 'badge-night';
+      if (item.status.includes('無法參加')) badgeClass = 'badge-none';
+
+      const safeName = escapeHTML(item.name);
+      const safeMsg = escapeHTML(item.message);
+      const firstChar = safeName ? safeName.charAt(0).toUpperCase() : '友';
+
+      let guestsNote = '';
+      if ((item.status.includes('晚餐') || item.status.includes('聚餐')) && item.dinnerGuests > 0) {
+        guestsNote = ` (${item.dinnerGuests}位)`;
+      }
+
+      card.innerHTML = `
+        <div class="msg-card-top">
+          <div class="user-info">
+            <div class="user-avatar">${firstChar}</div>
+            <div class="user-name">${safeName}</div>
+          </div>
+          <div class="tags-box">
+            <span class="tag-badge ${badgeClass}">${escapeHTML(item.status)}${guestsNote}</span>
+            <button class="delete-btn" onclick="deleteItem('${item.id}', '${safeName}')">🗑️ 刪除</button>
+          </div>
+        </div>
+        <div class="msg-text">${safeMsg ? safeMsg : '<span style="color:#b5a49e; font-style:italic;">（帶著滿滿的祝福默默支持～）</span>'}</div>
+        <div class="msg-time">${escapeHTML(item.time)}</div>
+      `;
+      return card;
+    }
+
+    function renderWall(list) {
+      const cardsList = document.getElementById('cardsList');
+      const wallCount = document.getElementById('wallCount');
+      wallCount.innerText = `已有 ${list.length} 位朋友回覆`;
+      cardsList.innerHTML = '';
+      if (list.length === 0) {
+        cardsList.innerHTML = '<div style="text-align:center; color:#a8968f; padding:30px; font-size:14px;">🌿 目前還沒有人留言，搶先寫下第一句祝福吧！</div>';
+        return;
+      }
+      list.forEach(item => cardsList.appendChild(renderCard(item)));
+    }
+
+    async function deleteItem(id, name) {
+      if (!confirm(`確定要刪除「${name}」的登記與留言嗎？`)) return;
+      const targetCard = document.getElementById(`card-${id}`);
+      if (targetCard) targetCard.style.opacity = '0.4';
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'delete', id: id, adminPassword: savedAdminPassword })
+        });
+        const result = await res.json();
+        if (result.success) {
+          allRecords = allRecords.filter(r => r.id !== id);
+          renderWall(allRecords);
+          updateCapacityUI(result.dayCount, result.maxDay, result.dinnerTotalPeople);
+          alert('已成功刪除！');
+        } else {
+          alert('刪除失敗：' + result.error);
+          if (targetCard) targetCard.style.opacity = '1';
+        }
+      } catch (err) {
+        alert('網路錯誤：' + err.message);
+        if (targetCard) targetCard.style.opacity = '1';
+      }
+    }
+
+    // 安全版：直接送往 Google 雲端比對，前端原始碼完全看不到密碼！
+    async function promptAdminLogin() {
+      const pass = prompt('請輸入管理員密碼：');
+      if (!pass) return;
+
+      try {
+        const res = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify({ action: 'verifyAdmin', adminPassword: pass })
+        });
+        const result = await res.json();
+
+        if (result.success) {
+          savedAdminPassword = pass;
+          document.getElementById('mainWrapper').classList.add('is-admin');
+          document.getElementById('adminStatusText').innerHTML = '<span class="admin-badge">🛡️ 管理員模式已啟用（可直接刪除留言）</span>';
+          alert('驗證成功！每張卡片右上角已出現刪除按鈕。');
+        } else {
+          alert('密碼錯誤！無法解鎖管理權限。');
+        }
+      } catch (err) {
+        alert('驗證連線失敗，請稍後再試！');
+      }
+    }
+
+    async function submitData() {
+      const nameInput = document.getElementById('name');
+      const msgInput = document.getElementById('message');
+      const submitBtn = document.getElementById('submitBtn');
+      const tipStatus = document.getElementById('tipStatus');
+      const name = nameInput.value.trim();
+
+      if (!name) {
+        alert('請填寫您的名字喔！🌿');
+        nameInput.focus();
+        return;
+      }
+
+      let finalGuests = 0;
+      if (currentStatus === '💕 登記＋晚餐，我都要參加' || currentStatus === '🍽️ 只參加晚上聚餐') {
+        if (currentGuests === 'more') {
+          const customVal = parseInt(document.getElementById('customGuestsInput').value, 10);
+          if (!customVal || customVal < 3) {
+            alert('請在「3位以上」欄位填寫具體的參加總人數（至少 3 位）喔！');
+            document.getElementById('customGuestsInput').focus();
+            return;
+          }
+          finalGuests = customVal;
+        } else {
+          finalGuests = currentGuests;
+        }
+      }
+
+      submitBtn.disabled = true;
+      tipStatus.innerText = '正在傳送中，請稍候... 💌';
+      tipStatus.style.color = '#9c8983';
+
+      try {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          body: JSON.stringify({
+            name: name,
+            status: currentStatus,
+            dinnerGuests: finalGuests,
+            message: msgInput.value.trim()
+          })
+        });
+
+        const res = await response.json();
+        submitBtn.disabled = false;
+
+        if (res.success) {
+          tipStatus.innerText = res.isUpdate ? '✨ 已更新您的最新意願與祝福！' : '✨ 已收到您的回覆與祝福！謝謝您！';
+          tipStatus.style.color = '#15803d';
+          updateCapacityUI(res.dayCount, res.maxDay, res.dinnerTotalPeople);
+
+          allRecords = allRecords.filter(r => r.name.toLowerCase() !== res.item.name.toLowerCase());
+          allRecords.unshift(res.item);
+          renderWall(allRecords);
+
+          nameInput.value = '';
+          msgInput.value = '';
+        } else {
+          tipStatus.innerText = '❌ 傳送未完成：' + res.error;
+          tipStatus.style.color = '#dc2626';
+          alert(res.error);
+        }
+      } catch (err) {
+        submitBtn.disabled = false;
+        tipStatus.innerText = '❌ 連線逾時，請再試一次！';
+        tipStatus.style.color = '#dc2626';
+      }
+    }
+
+    window.onload = async function() {
+      try {
+        const res = await fetch(API_URL);
+        const data = await res.json();
+        allRecords = data.list || [];
+        updateCapacityUI(data.dayCount, data.maxDay, data.dinnerTotalPeople);
+        renderWall(allRecords);
+      } catch (err) {
+        document.getElementById('wallCount').innerText = '載入失敗';
+      }
+    };
+  </script>
+</body>
+</html>
