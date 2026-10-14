@@ -48,7 +48,7 @@
       letter-spacing: 1px;
       display: inline-block;
       padding-bottom: 3px;
-      border-bottom: 1px solid #e8c6b0;
+ 
     }
     .event-date-badge {
       font-size: 13.5px;
@@ -156,7 +156,7 @@
     }
     .notice-title { font-weight: 700; margin-bottom: 5px; color: #c06c38; font-size: 13.5px; }
 
-    /* 登記表單 */
+    /* 登記表單主外框 */
     .form-card {
       background: #ffffff;
       border-radius: 20px;
@@ -178,18 +178,7 @@
       border-radius: 3px;
     }
 
-    .capacity-banner {
-      background: #fef7ee;
-      border: 1px solid #ebdcd0;
-      border-radius: 12px;
-      padding: 10px 14px;
-      font-size: 13px;
-      color: #934c1b;
-      line-height: 1.5;
-      margin-bottom: 18px;
-    }
-
-    .form-group { margin-bottom: 16px; }
+    .form-group { margin-bottom: 18px; }
     label {
       display: flex;
       align-items: center;
@@ -217,84 +206,151 @@
     }
     textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
 
-    /* 按鈕群組 */
-    .status-group { display: flex; flex-direction: column; gap: 9px; }
-    .status-item-block {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
+    /* 💌 幸福聚會出席回覆（新版獨立雙區塊） */
+    .rsvp-section-header {
+      margin-bottom: 14px;
     }
-    .status-btn {
+    .rsvp-main-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #3e3232;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+    .rsvp-sub-desc {
+      font-size: 12.5px;
+      color: #8c7873;
+    }
+
+    /* 區塊卡片 */
+    .sub-choice-card {
+      background: #fdfaf6;
+      border: 1.5px solid #ebdcd0;
+      border-radius: 14px;
+      padding: 16px 16px;
+      margin-bottom: 14px;
+    }
+    .sub-card-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 13px 16px;
+      margin-bottom: 4px;
+    }
+    .sub-card-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #3e3232;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .quota-badge-green {
+      background: #eafaf1;
+      color: #27ae60;
+      border: 1px solid #d4efdf;
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 2px 8px;
       border-radius: 12px;
-      border: 1.5px solid #ebdcd0;
-      background: #faf7f2;
-      color: #655450;
-      font-size: 14px;
-      font-weight: 500;
+    }
+    .quota-badge-green.full {
+      background: #fee2e2;
+      color: #ef4444;
+      border-color: #fca5a5;
+    }
+    .sub-card-hint {
+      font-size: 12px;
+      color: #8c7873;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    /* 單選項目選項列表 */
+    .radio-option-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .radio-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       cursor: pointer;
       user-select: none;
-      transition: all 0.2s;
+      font-size: 14px;
+      color: #4a3e3d;
+      font-weight: 500;
+      padding: 4px 0;
     }
-    .status-btn.active {
-      background: #fdf3e7;
-      border-color: #e59866;
-      color: #c06c38;
-      font-weight: 700;
-    }
-    .status-item-block.expanded .status-btn {
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
-      border-bottom-style: dashed;
-    }
-    .status-btn.disabled {
-      background: #f4f4f4;
-      border-color: #e5e5e5;
-      color: #b0b0b0;
+    .radio-item.disabled {
+      color: #b5a49e;
       cursor: not-allowed;
     }
-    .quota-tag {
-      font-size: 11.5px;
-      padding: 2px 8px;
-      border-radius: 10px;
-      background: #fae8d8;
-      color: #a4501c;
-      font-weight: 600;
+    .custom-radio {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s;
     }
-    .quota-tag.full { background: #fee2e2; color: #ef4444; }
-
-    /* 附屬卡片（依附在按鈕正下方） */
-    .attached-sub-box {
-      background: #fffcf8;
-      border: 1.5px solid #e59866;
-      border-top: none;
-      border-radius: 0 0 12px 12px;
-      padding: 12px 14px 14px;
-      animation: subSlideDown 0.2s ease-out;
-      box-shadow: 0 4px 10px rgba(229, 152, 102, 0.08);
-    }
-    @keyframes subSlideDown {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .guest-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
-    .guest-btn {
-      text-align: center;
-      padding: 8px 4px;
+    .radio-item.active .custom-radio {
+      border-color: #d97746;
       background: #ffffff;
-      border: 1.5px solid #ebdcd0;
-      border-radius: 8px;
-      font-size: 13px;
-      color: #655450;
-      cursor: pointer;
-      font-weight: 500;
-      transition: all 0.15s;
     }
-    .guest-btn.active { background: #fdf3e7; border-color: #e59866; color: #c06c38; font-weight: 700; }
-    .custom-count-input { display: none; margin-top: 8px; }
+    .radio-item.active .custom-radio::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d97746;
+    }
+
+    /* 晚餐分割線 */
+    .dinner-inner-divider {
+      height: 1px;
+      background: #ebdcd0;
+      margin: 14px 0;
+    }
+    .inner-question-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #655450;
+      margin-bottom: 10px;
+    }
+
+    /* ✨ 您的出席選擇預覽卡 */
+    .preview-summary-box {
+      background: #fdf3e7;
+      border: 1.5px solid #fae4cc;
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+    .preview-header {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #c06c38;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .preview-line {
+      font-size: 13.5px;
+      color: #5c4d4a;
+      line-height: 1.6;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
 
     .submit-btn {
       width: 100%;
@@ -374,6 +430,7 @@
 <body>
 
   <div class="wrapper" id="mainWrapper">
+    <!-- 頂部 Header -->
     <div class="top-header">
       <div class="ring-icon">💍</div>
       <h1 class="main-title">我們即將邁入人生的新篇章！</h1>
@@ -389,6 +446,7 @@
 
     <div class="arrow-down">↓</div>
 
+    <!-- 白天卡片 -->
     <div class="event-card">
       <div class="event-card-top">
         <div class="event-title">💍 白天｜幸福登記見證</div>
@@ -403,6 +461,7 @@
       <a href="https://maps.google.com/?q=臺北市士林區戶政事務所" target="_blank" class="map-btn">📍 查看地圖</a>
     </div>
 
+    <!-- 晚上卡片 -->
     <div class="event-card">
       <div class="event-card-top">
         <div class="event-title">🍽️ 晚上｜幸福晚餐聚會</div>
@@ -418,67 +477,98 @@
 
     <div class="arrow-down">↓</div>
 
+    <!-- 小小提醒 -->
     <div class="notice-card">
       <div class="notice-title">✨ 小小提醒</div>
       這不是正式婚宴，<b>不收禮金、不用準備禮物</b>，晚餐採各自付費（AA 制），每人預計 NT$200～500。<br>
       大家輕鬆參加就好，有你們的祝福就是最棒的禮物！🥰
     </div>
 
+    <!-- 登記表單主卡片 -->
     <div class="form-card">
-      <div id="capacityBanner" class="capacity-banner">名額計算中...</div>
       <div class="form-group">
         <label for="name">🌿 您的名字 / 暱稱 <span style="color:#d97746;">*</span></label>
         <input type="text" id="name" placeholder="請輸入姓名或好認的稱呼" required maxlength="30">
       </div>
 
-      <div class="form-group">
-        <label>📅 出席意願選擇 <span style="color:#d97746;">*</span></label>
-        <div class="status-group">
-          <!-- 項目 1：登記 + 晚餐 -->
-          <div class="status-item-block expanded" id="block-both">
-            <div id="btn-both" class="status-btn active" onclick="selectStatus('💕 登記＋晚餐，我都要參加', 'block-both')">
-              <span>💕 登記＋晚餐，我都要參加</span>
-              <span id="tag-both" class="quota-tag">限額 5 位</span>
-            </div>
-            <!-- 附屬晚餐人數面板（預設停駐在此） -->
-            <div id="attachedGuestsPanel" class="attached-sub-box">
-              <div style="font-size:12.5px; font-weight:700; color:#8c5638; margin-bottom:7px; display:flex; align-items:center; gap:4px;">
-                <span>↳ 🍽️ 晚餐出席人數（含自己）：</span>
-              </div>
-              <div class="guest-options">
-                <div class="guest-btn active" onclick="selectGuests(1, this)">1 位</div>
-                <div class="guest-btn" onclick="selectGuests(2, this)">2 位 (攜伴)</div>
-                <div class="guest-btn" onclick="selectGuests('more', this)">3 位以上</div>
-              </div>
-              <div id="customGuestsRow" class="custom-count-input">
-                <input type="number" id="customGuestsInput" min="3" max="10" placeholder="請輸入總人數（例：3）">
-              </div>
-            </div>
-          </div>
+      <!-- 出席回覆區塊 -->
+      <div class="rsvp-section-header">
+        <div class="rsvp-main-title">💌 幸福聚會出席回覆</div>
+        <div class="rsvp-sub-desc">白天與晚上的活動可以自由選擇，歡迎一起分享我們的喜悅！</div>
+      </div>
 
-          <!-- 項目 2：只參加白天登記 -->
-          <div class="status-item-block" id="block-day">
-            <div id="btn-day" class="status-btn" onclick="selectStatus('💍 只參加白天登記', 'block-day')">
-              <span>💍 只參加白天登記</span>
-              <span id="tag-day" class="quota-tag">限額 5 位</span>
-            </div>
+      <!-- ① 白天結婚登記卡片 -->
+      <div class="sub-choice-card">
+        <div class="sub-card-top">
+          <div class="sub-card-title">💍 ① 白天結婚登記</div>
+          <span id="dayQuotaBadge" class="quota-badge-green">計算中...</span>
+        </div>
+        <div class="sub-card-hint">僅開放少量親友見證與合照，每位回覆者限登記本人 1 位。</div>
+        
+        <div class="radio-option-list">
+          <div class="radio-item active" id="opt-day-yes" onclick="setDayChoice(true)">
+            <div class="custom-radio"></div>
+            <span>💕 我要參加登記</span>
           </div>
-
-          <!-- 項目 3：只參加晚上聚餐 -->
-          <div class="status-item-block" id="block-night">
-            <div id="btn-night" class="status-btn" onclick="selectStatus('🍽️ 只參加晚上聚餐', 'block-night')">
-              <span>🍽️ 只參加晚上聚餐</span>
-              <span style="font-size:12px; color:#b5a49e;">不限人數 💛</span>
-            </div>
-          </div>
-
-          <!-- 項目 4：無法參加 -->
-          <div class="status-item-block" id="block-none">
-            <div id="btn-none" class="status-btn" onclick="selectStatus('🥹 這次無法參加，送上祝福', 'block-none')">
-              <span>🥹 這次無法參加，送上祝福</span>
-            </div>
+          <div class="radio-item" id="opt-day-no" onclick="setDayChoice(false)">
+            <div class="custom-radio"></div>
+            <span>這次無法參加登記</span>
           </div>
         </div>
+      </div>
+
+      <!-- ② 晚上輕鬆聚餐卡片 -->
+      <div class="sub-choice-card">
+        <div class="sub-card-top">
+          <div class="sub-card-title">🍽️ ② 晚上輕鬆聚餐</div>
+          <span class="badge-warm" style="font-size:11.5px; padding:2px 8px;">歡迎攜伴</span>
+        </div>
+        <div class="sub-card-hint">不收禮金、晚餐各自付費，預計每人 NT$200～500。</div>
+        
+        <div class="radio-option-list">
+          <div class="radio-item active" id="opt-dinner-yes" onclick="setDinnerChoice('yes')">
+            <div class="custom-radio"></div>
+            <span>🥰 我要參加晚餐</span>
+          </div>
+          <div class="radio-item" id="opt-dinner-no" onclick="setDinnerChoice('no')">
+            <div class="custom-radio"></div>
+            <span>這次不參加晚餐</span>
+          </div>
+          <div class="radio-item" id="opt-dinner-maybe" onclick="setDinnerChoice('maybe')">
+            <div class="custom-radio"></div>
+            <span>時間尚未確定</span>
+          </div>
+        </div>
+
+        <!-- 晚餐人數選擇（參加晚餐時展開） -->
+        <div id="dinnerGuestsSubSection">
+          <div class="dinner-inner-divider"></div>
+          <div class="inner-question-title">晚餐預計出席幾位？（包含自己）</div>
+          <div class="radio-option-list">
+            <div class="radio-item active" id="guest-1" onclick="setGuestCount(1)">
+              <div class="custom-radio"></div>
+              <span>1 位（只有我）</span>
+            </div>
+            <div class="radio-item" id="guest-2" onclick="setGuestCount(2)">
+              <div class="custom-radio"></div>
+              <span>2 位（我 + 1 位同行者）</span>
+            </div>
+            <div class="radio-item" id="guest-more" onclick="setGuestCount('more')">
+              <div class="custom-radio"></div>
+              <span>3 位以上</span>
+            </div>
+          </div>
+          <div id="customGuestsRow" style="display:none; margin-top:8px;">
+            <input type="number" id="customGuestsInput" min="3" max="10" placeholder="請輸入總人數（例：3）" oninput="updateSummaryPreview()">
+          </div>
+        </div>
+      </div>
+
+      <!-- ✨ 您的出席選擇即時總結預覽卡 -->
+      <div class="preview-summary-box">
+        <div class="preview-header">✨ 您的出席選擇</div>
+        <div class="preview-line" id="previewDayLine">💍 白天：參加登記</div>
+        <div class="preview-line" id="previewDinnerLine">🍽️ 晚上：參加晚餐 ( 1 位 )</div>
       </div>
 
       <div class="form-group" style="margin-top:18px;">
@@ -490,6 +580,7 @@
       <div id="tipStatus" class="tip-status"></div>
     </div>
 
+    <!-- 祝福留言牆 Header -->
     <div class="wall-header-section">
       <div class="wall-title-row">
         <span>💬 幸福祝福留言牆</span>
@@ -517,8 +608,12 @@
     // ⚠️ 請務必將此處換成您 Google Apps Script 部署後的 Web App URL 網址！
     const API_URL = "https://script.google.com/macros/s/AKfycbzvixYnVzusZ-Fey9mgr-Qs68Vju5vvTZfq9DMSQQleIZ_02qxwyLwnu4QgXVK2f4MO/exec";
 
-    let currentStatus = '💕 登記＋晚餐，我都要參加';
-    let currentGuests = 1;
+    // 狀態設定
+    let dayAttend = true;          // 白天：true / false
+    let dinnerChoice = 'yes';      // 晚餐：'yes' / 'no' / 'maybe'
+    let dinnerGuests = 1;          // 人數：1 / 2 / 'more'
+    let dayQuotaRemaining = 5;
+
     let allRecords = [];
     let savedAdminPassword = '';
 
@@ -529,84 +624,97 @@
         .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
     }
 
-    // 動態附屬展開/移動人數欄位
-    function selectStatus(statusText, blockId) {
-      const targetBtn = document.querySelector(`#${blockId} .status-btn`);
-      if (targetBtn && targetBtn.classList.contains('disabled')) {
-        alert('抱歉！白天登記觀禮席次已額滿（限額 5 位），非常歡迎選擇「🍽️ 只參加晚上聚餐」一起吃頓飯！');
+    // 點選白天
+    function setDayChoice(attend) {
+      if (attend && dayQuotaRemaining <= 0) {
+        alert('抱歉！白天登記觀禮席次已額滿（限額 5 位），歡迎晚上一起吃飯或留下祝福喔！');
         return;
       }
-      currentStatus = statusText;
-
-      document.querySelectorAll('.status-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.status-item-block').forEach(b => b.classList.remove('expanded'));
-
-      if (targetBtn) targetBtn.classList.add('active');
-
-      const panel = document.getElementById('attachedGuestsPanel');
-
-      if (blockId === 'block-both' || blockId === 'block-night') {
-        const targetBlock = document.getElementById(blockId);
-        targetBlock.classList.add('expanded');
-        targetBlock.appendChild(panel);
-        panel.style.display = 'block';
-      } else {
-        panel.style.display = 'none';
-      }
+      dayAttend = attend;
+      document.getElementById('opt-day-yes').classList.toggle('active', attend);
+      document.getElementById('opt-day-no').classList.toggle('active', !attend);
+      updateSummaryPreview();
     }
 
-    function selectGuests(val, el) {
-      document.querySelectorAll('.guest-btn').forEach(btn => btn.classList.remove('active'));
-      el.classList.add('active');
-      const customInputRow = document.getElementById('customGuestsRow');
-      if (val === 'more') {
-        customInputRow.style.display = 'block';
+    // 點選晚餐意願
+    function setDinnerChoice(choice) {
+      dinnerChoice = choice;
+      document.getElementById('opt-dinner-yes').classList.toggle('active', choice === 'yes');
+      document.getElementById('opt-dinner-no').classList.toggle('active', choice === 'no');
+      document.getElementById('opt-dinner-maybe').classList.toggle('active', choice === 'maybe');
+
+      const guestsSection = document.getElementById('dinnerGuestsSubSection');
+      if (choice === 'yes') {
+        guestsSection.style.display = 'block';
+      } else {
+        guestsSection.style.display = 'none';
+      }
+      updateSummaryPreview();
+    }
+
+    // 點選晚餐人數
+    function setGuestCount(count) {
+      dinnerGuests = count;
+      document.getElementById('guest-1').classList.toggle('active', count === 1);
+      document.getElementById('guest-2').classList.toggle('active', count === 2);
+      document.getElementById('guest-more').classList.toggle('active', count === 'more');
+
+      const customRow = document.getElementById('customGuestsRow');
+      if (count === 'more') {
+        customRow.style.display = 'block';
         document.getElementById('customGuestsInput').focus();
-        currentGuests = 'more';
       } else {
-        customInputRow.style.display = 'none';
-        currentGuests = val;
+        customRow.style.display = 'none';
+      }
+      updateSummaryPreview();
+    }
+
+    // 更新即時總結卡片
+    function updateSummaryPreview() {
+      const dayLine = document.getElementById('previewDayLine');
+      const dinnerLine = document.getElementById('previewDinnerLine');
+
+      // 白天文字
+      if (dayAttend) {
+        dayLine.innerHTML = '💍 <b>白天</b>：參加登記';
+      } else {
+        dayLine.innerHTML = '💍 <b>白天</b>：不克前往';
+      }
+
+      // 晚餐文字
+      if (dinnerChoice === 'yes') {
+        let countText = '1 位';
+        if (dinnerGuests === 2) countText = '2 位';
+        if (dinnerGuests === 'more') {
+          const customVal = document.getElementById('customGuestsInput').value;
+          countText = customVal ? `${customVal} 位` : '3 位以上';
+        }
+        dinnerLine.innerHTML = `🍽️ <b>晚上</b>：參加晚餐 ( ${countText} )`;
+      } else if (dinnerChoice === 'maybe') {
+        dinnerLine.innerHTML = '🍽️ <b>晚上</b>：時間尚未確定';
+      } else {
+        dinnerLine.innerHTML = '🍽️ <b>晚上</b>：不克前往';
       }
     }
 
+    // 更新名額顯示
     function updateCapacityUI(dayCount, maxDay, dinnerTotalPeople) {
-      const banner = document.getElementById('capacityBanner');
-      const btnBoth = document.getElementById('btn-both');
-      const btnDay = document.getElementById('btn-day');
-      const tagBoth = document.getElementById('tag-both');
-      const tagDay = document.getElementById('tag-day');
-      const remainingDay = maxDay - dayCount;
+      dayQuotaRemaining = maxDay - dayCount;
+      const badge = document.getElementById('dayQuotaBadge');
+      const dayYesBtn = document.getElementById('opt-day-yes');
 
-      let html = `🏛️ <b>白天登記見證</b>：已登記 <b>${dayCount}</b> / ${maxDay} 位（戶政事務所席位有限）<br>
-                  🍽️ <b>晚上聚餐</b>：已有 <b>${dinnerTotalPeople}</b> 位出席（含攜伴，不限人數熱情歡迎！）`;
-
-      if (remainingDay <= 0) {
-        html = `⚠️ <b>白天登記名額已滿（已達 5 人上限）</b><br>非常歡迎大家選擇「🍽️ 只參加晚上聚餐（目前已有 ${dinnerTotalPeople} 位）」一起熱鬧慶祝！`;
-        banner.style.background = '#fef2f2';
-        banner.style.borderColor = '#fca5a5';
-        banner.style.color = '#b91c1c';
-        btnBoth.classList.add('disabled');
-        btnDay.classList.add('disabled');
-        tagBoth.innerText = '已額滿';
-        tagBoth.className = 'quota-tag full';
-        tagDay.innerText = '已額滿';
-        tagDay.className = 'quota-tag full';
-
-        if (currentStatus === '💕 登記＋晚餐，我都要參加' || currentStatus === '💍 只參加白天登記') {
-          selectStatus('🍽️ 只參加晚上聚餐', 'block-night');
+      if (dayQuotaRemaining <= 0) {
+        badge.innerText = '已額滿';
+        badge.className = 'quota-badge-green full';
+        dayYesBtn.classList.add('disabled');
+        if (dayAttend) {
+          setDayChoice(false);
         }
       } else {
-        banner.style.background = '#fef7ee';
-        banner.style.borderColor = '#ebdcd0';
-        banner.style.color = '#934c1b';
-        btnBoth.classList.remove('disabled');
-        btnDay.classList.remove('disabled');
-        tagBoth.innerText = `剩 ${remainingDay} 名額`;
-        tagBoth.className = 'quota-tag';
-        tagDay.innerText = `剩 ${remainingDay} 名額`;
-        tagDay.className = 'quota-tag';
+        badge.innerText = `剩餘 ${dayQuotaRemaining} 位`;
+        badge.className = 'quota-badge-green';
+        dayYesBtn.classList.remove('disabled');
       }
-      banner.innerHTML = html;
     }
 
     function renderCard(item) {
@@ -683,7 +791,6 @@
       }
     }
 
-    // 安全版：直接送往 Google 雲端比對，前端原始碼完全看不到密碼！
     async function promptAdminLogin() {
       const pass = prompt('請輸入管理員密碼：');
       if (!pass) return;
@@ -721,9 +828,22 @@
         return;
       }
 
+      // 將獨立選項組裝為相容後端的狀態文字
+      let finalStatus = '';
+      if (dayAttend && dinnerChoice === 'yes') {
+        finalStatus = '💕 登記＋晚餐，我都要參加';
+      } else if (dayAttend && dinnerChoice !== 'yes') {
+        finalStatus = '💍 只參加白天登記';
+      } else if (!dayAttend && dinnerChoice === 'yes') {
+        finalStatus = '🍽️ 只參加晚上聚餐';
+      } else {
+        finalStatus = '🥹 這次無法參加，送上祝福';
+      }
+
+      // 計算晚餐人數
       let finalGuests = 0;
-      if (currentStatus === '💕 登記＋晚餐，我都要參加' || currentStatus === '🍽️ 只參加晚上聚餐') {
-        if (currentGuests === 'more') {
+      if (dinnerChoice === 'yes') {
+        if (dinnerGuests === 'more') {
           const customVal = parseInt(document.getElementById('customGuestsInput').value, 10);
           if (!customVal || customVal < 3) {
             alert('請在「3位以上」欄位填寫具體的參加總人數（至少 3 位）喔！');
@@ -732,7 +852,7 @@
           }
           finalGuests = customVal;
         } else {
-          finalGuests = currentGuests;
+          finalGuests = dinnerGuests;
         }
       }
 
@@ -745,7 +865,7 @@
           method: 'POST',
           body: JSON.stringify({
             name: name,
-            status: currentStatus,
+            status: finalStatus,
             dinnerGuests: finalGuests,
             message: msgInput.value.trim()
           })
